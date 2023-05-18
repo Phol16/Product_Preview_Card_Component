@@ -18,7 +18,7 @@ Desktop View
 
 - Source Code: https://github.com/Phol16/Product_Preview_Card_Component
 
-- Live Site: 
+- Live Site: https://phol16.github.io/Product_Preview_Card_Component/
 
 ### My process
 
