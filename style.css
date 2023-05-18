@@ -1,0 +1,125 @@
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --VeryDarkCyan: hsl(158, 35%, 20%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  background-color: var(--Cream);
+}
+.component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+.container {
+  background-color: var(--White);
+  max-width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+  object-fit: contain;
+}
+.mainContainer {
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.3rem;
+  max-width: 350px;
+}
+.typeText {
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  color: var(--DarkGrayishBlue);
+  font-size: 0.7rem;
+  letter-spacing: 0.5em;
+}
+.detailContainer {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  padding: 5px;
+}
+.headText {
+  font-family: 'Fraunces';
+  font-size: 2rem;
+}
+.descText {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--DarkGrayishBlue);
+  font-family: 'Montserrat';
+  text-align: left;
+  word-spacing: 0.1em;
+  line-height: 1.3rem;
+}
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.priceContainer p {
+  color: var(--DarkCyan);
+  font-weight: 700;
+  font-family: 'Fraunces';
+  font-size: 2rem;
+}
+.priceContainer span {
+  color: var(--DarkGrayishBlue);
+}
+.addButton {
+  background-color: var(--DarkCyan);
+  border: none;
+  padding: 1rem;
+  color: var(--White);
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+:is(:hover, :focus).addButton{
+  background-color: var(--VeryDarkCyan);
+}
+@media only screen and (min-width: 715px) {
+  .container{
+    display: flex;
+    max-width: fit-content;
+  }
+  .image{
+    content: url(./images/image-product-desktop.jpg);
+    max-width: 350px;
+    object-fit: cover;
+  }
+  .mainContainer{
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .detailContainer{
+    gap: 2rem;
+  }
+  .headText{
+    font-size: 2.5rem;
+  }
+  .descText{
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+  }
+}
